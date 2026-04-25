@@ -23,7 +23,7 @@ for i in $(seq 1 $WORKERS); do
 
   if [ -f "$ENV_FILE" ]; then
     echo "Using $ENV_FILE"
-    ENV_BLOCK="      - .env\n      - $ENV_FILE"
+    ENV_BLOCK="      - $ENV_FILE"
   else
     echo "⚠️  $ENV_FILE not found, using .env"
     ENV_BLOCK="      - .env"
